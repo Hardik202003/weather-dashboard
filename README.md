@@ -6,6 +6,8 @@ A modern, mobile-friendly weather application that provides real-time weather da
 
 Check out the live demo: [Weather Dashboard](https://Hardik202003.github.io/weather-dashboard/)
 
+**Status:** ✅ Live and active! The application is successfully deployed and ready to use.
+
 ## Features
 
 - **Real-time Weather Data**: Get current weather conditions for any city worldwide
