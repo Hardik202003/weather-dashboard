@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- PWA metadata -->
+    <meta name="description" content="A modern, mobile-friendly weather dashboard application">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <!-- Fonts and styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Enter city name...">
+                <div class="button-group">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                    <button id="location-button" title="Use your current location"><i class="fas fa-location-dot"></i></button>
+                    <button id="add-city-button" title="Add to dashboard without replacing current cities"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="view-controls">
+                <button id="single-view-btn" class="view-btn active"><i class="fas fa-city"></i> Single</button>
+                <button id="multi-view-btn" class="view-btn"><i class="fas fa-th-large"></i> Multi-City</button>
+            </div>
+        </header>
+
+        <div id="single-view" class="weather-container">
+            <div class="current-weather" id="current-weather">
+                <!-- Current weather data will be displayed here -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-pulse"></i>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+            
+            <div class="forecast" id="forecast">
+                <h2><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h2>
+                <div class="forecast-cards" id="forecast-cards">
+                    <!-- Forecast cards will be added here -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-pulse"></i>
+                        <p>Loading forecast...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="multi-view" class="multi-city-container">
+            <!-- Multiple cities will be displayed here -->
+            <div class="empty-state">
+                <i class="fas fa-city"></i>
+                <p>No cities added yet. Search for a city or use your current location.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p><i class="fas fa-location-dot"></i> Tap location for current position</p>
+            <p><i class="fas fa-cloud-sun"></i> Stay updated with real-time weather</p>
+        </footer>
+    </div>
+
+    <!-- Offline detection -->
+    <div id="offline-banner" class="offline-banner" style="display: none;">
+        <i class="fas fa-wifi-slash"></i>
+        <p>You are currently offline. Some features may be limited.</p>
+    </div>
+
+    <!-- Service worker detection -->
+    <script>
+        // Detect when the user goes offline
+        window.addEventListener('online', function() {
+            document.getElementById('offline-banner').style.display = 'none';
+        });
+        
+        window.addEventListener('offline', function() {
+            document.getElementById('offline-banner').style.display = 'flex';
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
