@@ -4,8 +4,7 @@ A modern, mobile-friendly weather application that provides real-time weather da
 
 ## Live Demo
 
-Check out the live demo: [Weather Dashboard](https://YOUR_USERNAME.github.io/weather-dashboard/)
-(Replace YOUR_USERNAME with your actual GitHub username after deployment)
+Check out the live demo: [Weather Dashboard](https://Hardik202003.github.io/weather-dashboard/)
 
 ## Features
 
