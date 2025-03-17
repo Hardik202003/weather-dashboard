@@ -56,6 +56,3 @@ To install as a PWA on mobile:
 - Icons from [Font Awesome](https://fontawesome.com/)
 - Fonts from [Google Fonts](https://fonts.google.com/)
 
-## License
-
-MIT License - Feel free to use and modify for your own projects 
