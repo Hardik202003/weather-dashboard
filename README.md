@@ -2,7 +2,10 @@
 
 A modern, mobile-friendly weather application that provides real-time weather data and forecasts.
 
-![Weather Dashboard Screenshot](screenshots/screenshot1.png)
+## Live Demo
+
+Check out the live demo: [Weather Dashboard](https://YOUR_USERNAME.github.io/weather-dashboard/)
+(Replace YOUR_USERNAME with your actual GitHub username after deployment)
 
 ## Features
 
